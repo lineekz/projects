@@ -1,0 +1,214 @@
+.chip-preview-container {
+  background: url('../img/header.jpg') 50% 17% no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+  height: 670px;
+  
+}
+
+.chip-preview-container::after {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9) url('../img/spinner.gif') center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0;
+}
+.chip-preview-container-bg {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.chip-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+  margin: auto;
+  max-width: 960px;
+  
+}
+.chip-preview-title {
+  margin-top: 130px;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Abril Fatface', serif;
+  color: #fedc18;
+  padding: 24px 0px;
+}
+.chip-preview-text {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 0px 30px 0px;
+}
+.chip-preview-text a {
+  text-decoration: dashed;
+  color:rgba(254, 219, 24, 0.8);
+}
+.br {
+  height: 10px;
+}
+.chip-preview-buttons {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 20px;
+
+}
+.chip-preview-button {
+  max-width: 350px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-size: 0.8em;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgb(254, 220, 24) 0%, rgb(255, 157, 45) 50%, rgb(254, 220, 24) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgb(255 157 45 / 64%);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 15px 70px;
+}
+
+.chip-preview-button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(370px + 12px);
+    min-height: calc(70px + 12px);
+    border: 6px solid rgb(255, 157, 45);
+    box-shadow: 0 0 60px rgb(255 157 45 / 64%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.chip-preview-button:hover,
+.chip-preview-button:focus {
+  color: #3f414a;
+  transform: translateY(-6px);
+}
+
+.chip-preview-button:hover:before,
+.chip-preview-button:focus:before {
+  opacity: 1;
+}
+
+.chip-preview-button:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 6px solid rgb(255, 157, 45);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.chip-preview-button:hover::after,
+.chip-preview-button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 230px;
+    height: 230px;
+    opacity: 0;
+  }
+}
+
+.chip-info {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+  justify-content: center;
+
+}
+.chip-order,
+.chip-order-photo {
+  width: 30%;
+}
+.chip-order {
+  flex-direction: column;
+  margin-right: 150px;
+
+}
+.chip-order-photo {
+
+  background-image: url(../img/chip-order-photo.jpg);
+  height: 475px;
+  width: 475px;
+}
+.chip-info-title {
+  color:rgb(254, 220, 24);
+  line-height: 1.2;
+}
+.chip-info-title::after {
+  content:'';
+  display: block;
+  margin: 15px 0;
+  height: 2px;
+  max-width: 75px;
+  background-color:rgb(254, 220, 24);
+}
+
+.chip-info-text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.chip-info-buttons {
+  margin-top: 35px;
+}
+.chip-info-button {
+  max-width: 350px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-size: 0.8em;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgb(254, 220, 24) 0%, rgb(255, 157, 45) 50%, rgb(254, 220, 24) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgb(255 157 45 / 64%);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 15px 70px;
+}
+
+.chip-info-button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(370px + 12px);
+    min-height: calc(70px + 12px);
+    border: 6px solid rgb(255, 157, 45);
+    box-shadow: 0 0 60px rgb(255 157 45 / 64%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+

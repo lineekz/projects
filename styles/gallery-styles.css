@@ -1,0 +1,214 @@
+h2:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 2px;
+  width: 55%;
+  background-color: #ff9d2d;
+}
+@media screen and (max-width: 769px) {
+  h2:after {
+    bottom: -5px;
+  }
+}
+
+.main {
+  padding-top: 70px;
+}
+
+.auto {
+  margin-top: 40px;
+}
+
+.auto__title {
+  text-align: center;
+}
+
+.auto__content {
+  margin-top: 40px;
+}
+
+.auto__slider {
+  position: relative;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 35%;
+  z-index: 2;
+  font-size: 0;
+  width: 30px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+  background: url(../img/arrow-slide-left.svg) center center /50% no-repeat
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+  background: url(../img/arrow-slide-right.svg) center center /50% no-repeat
+}
+
+.slick-dots {
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-dots li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  background: #fedc18;
+  border: none;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+  background: #ff9d2d;
+}
+
+.auto__text {
+  text-align: center;
+}
+
+.auto__img {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .auto {
+    margin-top: 20px;
+  }
+
+  .auto__content {
+    margin-top: 20px;
+  }
+
+  .auto__img {
+    width: 90%;
+  }
+}
+
+/*teachers styles*/
+.teachers {
+  margin-top: 40px;
+}
+
+.teachers__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.teachers__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.slick-arrow.slick-prev {
+  left: 10%;
+  background-size: 100%;
+}
+
+.slick-arrow.slick-next {
+  right: 10%;
+  background-size: 100%;
+}
+
+.teachers__card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.teachers__card:hover .card__content {
+  opacity: 1;
+  transform: translate(0px, -10px) rotate(0deg);
+}
+
+.card__img {
+  width: 70%;
+  margin: 0 AUTO;
+}
+
+.card__content {
+  margin: 0 auto;
+  width: 50%;
+  opacity: 0;
+  text-align: center;
+  background-color: #3f414a96;
+  margin-top: -150px;
+  height: 150px;
+  transition: all 0.5s ease 0s;
+  transform: translate(0px, 0px) rotate(0deg);
+}
+
+.card__text {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .teachers {
+    margin-top: 20px;
+  }
+
+  .teachers__title {
+    margin-bottom: 20px;
+  }
+  
+
+  .card__title {
+    font-size: 0.8em;
+  }
+
+  .card__text {
+    font-size: 0.5em;
+    margin-left: 5px;
+  }
+
+  .card__content {
+    width: 90%;
+    height: 75px;
+    margin-top: -75px;
+  }
+
+  .card__img {
+    width: 90%;
+  }
+
+  .slick-arrow.slick-prev {
+    left: 3%;
+  }
+
+  .slick-arrow.slick-next {
+    right: 3%;
+  }
+
+  .slick-arrow.slick-next,
+  .slick-arrow.slick-prev {
+    background-size: 50%;
+  }
+}
+
