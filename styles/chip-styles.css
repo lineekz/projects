@@ -216,14 +216,73 @@
 
 
 .chip-info {
-  margin-top: 100px;
+
+  position: relative;
+  height: 900px;
+  margin: 100px;
+  margin-top: 120px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: row;
-  margin-bottom: 100px;
-  justify-content: center;
+  justify-content: space-between;
+  
+}
+.chip-info-colorblock {
+  background-color:rgb(255, 157, 45);
+  margin: 0 auto 0 0;
+  z-index: 1;
+  width: 40vw;
+  height: 55%;
 
 }
-.chip-order,
+.chip-info-maintext {
+  position: absolute;
+  z-index: 4;
+  background-color: white;
+  max-width: 35%;
+  height: 60%;
+  left: 50px;
+  top: -80px;
+  color: black;
+  padding: 30px;
+  line-height: 1.5;
+}
+.chip-info-maintext>.chip-info-text>h2,
+.chip-info-suptext>h2 {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.chip-info-img {
+  top: 25%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  width: 600px;
+  height: 400px;
+  transform: translate(-50%);
+}
+.chip-info-suptext {
+  z-index: 3;
+  color: black;
+  margin: auto 0 0 0;
+  background-color:rgb(255, 157, 45);
+  max-width: 45%;
+  padding: 30px;
+  line-height: 1.5; 
+}
+.chip-info-warning {
+  position: absolute;
+  color: black;
+  background-color:white;
+  width: 500px;
+  height: 120px;
+  padding: 15px; 
+  top: 760px;
+}
+/* .chip-order,
 .chip-order-photo {
   width: 30%;
 }
@@ -232,12 +291,7 @@
   margin-right: 150px;
 
 }
-.chip-order-photo {
 
-  background-image: url(../img/chip-order-photo.jpg);
-  height: 475px;
-  width: 475px;
-}
 .chip-info-title {
   color:rgb(254, 220, 24);
   line-height: 1.2;
@@ -289,4 +343,4 @@
     opacity: 0;
     transition: all .3s ease-in-out 0s;
 }
-
+ */
