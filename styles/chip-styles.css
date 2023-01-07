@@ -2,9 +2,8 @@
   background: url('../img/header.jpg') 50% 17% no-repeat;
   background-size: cover;
   color: #ffffff;
+  margin-top: -100px;
   position: relative;
-  height: 670px;
-  
 }
 
 .chip-preview-container::after {
@@ -20,38 +19,50 @@
   visibility: hidden;
   transition: all 0.5s ease 0;
 }
+
 .chip-preview-container-bg {
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
 .chip-preview-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 240px 15px 0 15px;
   display: flex;
+  /* display: flex;
   margin: 0 50px;
   margin: auto;
   max-width: 960px;
-  justify-content: space-between;
-  
+  justify-content: space-between; */
 }
+
 .chip-preview-title {
-  margin-top: 130px;
+  width: 70%;
+  /* margin-top: 130px;
   font-size: 50px;
   font-family: 'Abril Fatface', serif;
   color: #fedc18;
-  padding: 24px 0px;
+  padding: 24px 0px; */
 }
+
 .chip-preview-text {
-  font-size: 20px;
+  /* font-size: 20px;
   font-family: 'Poppins', sans-serif;
-  padding-top: 30px;
+  padding-top: 30px; */
+  width: 90%;
+  padding: 45px 0 0 0;
 }
+
+/* 
 .chip-preview-text a {
   text-decoration: dashed;
-  color:rgba(254, 219, 24, 0.8);
+  color: rgba(254, 219, 24, 0.8);
 }
+
 .br {
   height: 10px;
-}
+} */
+
 .chip-preview__form {
   padding: 30px 0 0 0;
   display: flex;
@@ -107,13 +118,16 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.chip-preview-buttons {
-  margin-top: 20px;
+
+.chip-preview-button {
+  /* margin-top: 20px;
   text-align: center;
   font-size: 25px;
-  padding-bottom: 20px;
+  padding-bottom: 20px; */
+  margin: 20px 0 40px 20px;
 
 }
+
 .chip-preview-button {
   max-width: 350px;
   text-transform: uppercase;
@@ -133,17 +147,17 @@
 
 .chip-preview-button::before {
   content: '';
-    border-radius: 1000px;
-    min-width: calc(370px + 12px);
-    min-height: calc(70px + 12px);
-    border: 6px solid rgb(255, 157, 45);
-    box-shadow: 0 0 60px rgb(255 157 45 / 64%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: all .3s ease-in-out 0s;
+  border-radius: 1000px;
+  min-width: calc(370px + 12px);
+  min-height: calc(70px + 12px);
+  border: 6px solid rgb(255, 157, 45);
+  box-shadow: 0 0 60px rgb(255 157 45 / 64%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
 }
 
 .chip-preview-button:hover,
@@ -189,14 +203,22 @@
     opacity: 0;
   }
 }
-.code-contacts-wrapper {
-  text-align: right;
-}
+
+
 .code__contacts {
-  margin-top: 200px;
-  padding: 20px 0;
+  /* margin-top: 200px; */
+  /* padding: 20px 0; */
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: right;
 
+}
+
+.code__contacts h2 {
+  margin-bottom: 20px;
+  display: block;
 }
 
 .code__contacts a {
@@ -221,20 +243,22 @@
   height: 900px;
   margin: 100px;
   margin-top: 120px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
+
 }
+
 .chip-info-colorblock {
-  background-color:rgb(255, 157, 45);
+  background-color: rgb(255, 157, 45);
   margin: 0 auto 0 0;
   z-index: 1;
   width: 40vw;
   height: 55%;
 
 }
+
 .chip-info-maintext {
   position: absolute;
   z-index: 4;
@@ -247,6 +271,7 @@
   padding: 30px;
   line-height: 1.5;
 }
+
 .chip-info-maintext>.chip-info-text>h2,
 .chip-info-suptext>h2 {
   color: black;
@@ -264,24 +289,27 @@
   height: 400px;
   transform: translate(-50%);
 }
+
 .chip-info-suptext {
   z-index: 3;
   color: black;
   margin: auto 0 0 0;
-  background-color:rgb(255, 157, 45);
+  background-color: rgb(255, 157, 45);
   max-width: 45%;
   padding: 30px;
-  line-height: 1.5; 
+  line-height: 1.5;
 }
+
 .chip-info-warning {
   position: absolute;
   color: black;
-  background-color:white;
+  background-color: white;
   width: 500px;
   height: 120px;
-  padding: 15px; 
+  padding: 15px;
   top: 760px;
 }
+
 /* .chip-order,
 .chip-order-photo {
   width: 30%;
