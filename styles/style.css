@@ -285,7 +285,7 @@ h3 {
   background-color: #0d0e15;
 }
 
-.embed-container-map {
+.map {
   margin-top: 20px;
   text-align: center;
   height: 480px;
@@ -297,7 +297,7 @@ h3 {
 }
 
 @media screen and (max-width: 480px) {
-  .embed-container-map {
+  .map {
     height: 320px;
   }
 }
