@@ -216,12 +216,13 @@
 .chip-info-maintext {
   position: relative;
   z-index: 4;
-  background-color: lightgrey;
-  color: black;
+  background-color: #3f414a;
+  color: white;
   margin: -70px 30px 30px 30px;
   line-height: 1.7;
   padding: 10px;
   border-radius: 10px;
+  box-shadow: 0 0 20px white;
 }
 
 .chip-info-maintext h2 {
@@ -256,12 +257,13 @@
 }
 
 .chip-info-subtext {
-  background-color:lightgrey;
-  color: black;
+  background-color:#3f414a;
+  color: white;
   margin: 30px 30px -45px 30px;
   line-height: 1.7;
   padding: 10px;
   border-radius: 10px;
+  box-shadow: 0 0 20px white;
 }
 
 .chip-info-subtext h2 {
@@ -272,11 +274,12 @@
 }
 
 .chip-info-warning {
-  color: black;
-  background-color: lightgrey;
+  color: white;
+  background-color: #3f414a;
   max-width: 45%;
   padding: 15px;
   margin: 0 0 20px 20px;
+  box-shadow: 0 0 20px white;
 }
 
 
