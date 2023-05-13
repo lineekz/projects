@@ -41,7 +41,10 @@
     <link rel="stylesheet" href="styles/style.css" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="./scripts/" defer></script>
+    <script src="slick.min.js" defer></script>
+    <script src="scripts/burger-menu.js" defer></script>
+    <script src="scripts/scroll.js" defer></script>
+    <script src="scripts/send-request-chip.js" defer></script>
   </head>
   <body class="wrapper" id="default">
     <!-- Google Tag Manager (noscript) -->
@@ -78,7 +81,7 @@
             <li><a class="header__link" href="index.html#timing">Наборы</a></li>
             <li><a class="header__link" href="gallery.html">Галерея</a></li>
             <li><a class="header__link" href="chip.html">Чип-карта</a></li>
-            <li><a class="header__link" href="#contacts">Контакты</a></li>
+            <li><a class="header__link" href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
         <div class="header__burger">
@@ -95,7 +98,12 @@
               <p class="chip-preview-text">
                 Оказываем помощь в оформлении чип-карты
               </p>
-              <form action="#" class="chip-preview__form">
+
+              <form
+                action="https://avtoskola.by/mail/sender-chip.php"
+                class="chip-preview__form"
+                method="post"
+              >
                 <div class="input-group">
                   <input
                     type="text"
@@ -108,18 +116,18 @@
                 <div class="input-group">
                   <input
                     type="tel"
-                    name="Phone"
+                    name="phone"
                     required
                     placeholder="Ваш телефон"
                   />
-                  <label for="Phone">Ваш телефон</label>
+                  <label for="phone">Ваш телефон</label>
                 </div>
-                <button type="submit" class="chip-preview-button">
+                <button type="button" class="chip-preview-button">
                   Получить чип-карту
                 </button>
               </form>
             </div>
-            <!-- <div class="code-contacts-wrapper"> -->
+
             <div class="code__contacts">
               <h2>Наши Контакты</h2>
               <a href="tel:+375445549594" target="_blank">+375 44 554-95-94</a>
@@ -154,12 +162,11 @@
               оформляются легально и действительны на территории ЕС. С чип
               картой изготовленной в Польше вы можете работать водителем по всей
               Европе. ВАЖНО! Если у вас уже есть чип карта, то сделать новую
-              можно только после окончания срока действия текущей карты (даже
-              если немного времени осталось).
+              можно не ранее, чем за 60 дней до окончания срока действия старой.
             </p>
           </div>
           <div class="chip-info__center chip-info-img">
-            <img src="/img/card-tacho.jpg" alt="chip card" />
+            <img src="img/chip-card-image.jpg" alt="chip card" />
           </div>
         </div>
         <div class="chip-info__right">
@@ -167,10 +174,10 @@
             <h2>Дополнительная информация</h2>
             <p>
               Цифровой тахограф - это контрольное устройство, которое фиксирует
-              скорость, а также режима труда и отдыха экипажа во время маршрута.
+              скорость, а также режим труда и отдыха экипажа во время маршрута.
               Чип-карта - это электронная карта водителя, которая выдается в
               одиночном экземпляре и привязана к водительскому удостоверению.
-              Грубо говоря, это защищённая карта памяти, которая хранит
+              Образно говоря, это защищённая карта памяти, которая хранит
               информацию о всех активностях и паузах водителя.
             </p>
           </div>
@@ -178,243 +185,16 @@
       </section>
       <div class="chip-info-warning">
         <span>
-          *По правилам стран ЕС во всех автобусах и грузовых транспортах должен
-          бытьустановлен тахограф.
+          *По правилам стран ЕС во всех автобусах и грузовых автомобилях должен
+          быть установлен тахограф.
         </span>
       </div>
-    </div>
-    <!-- footer -->
-    <footer class="footer" id="contacts">
-      <div class="container">
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/d/u/0/embed?mid=1pUlEdJ-BdgTRSDaSpOjmg9IeQbJMjuY&ehbc=2E312F"
-            width="80%"
-            height="100%"
-            frameborder="0"
-            allowfullscreen=""
-            aria-hidden="true"
-            tabindex="0"
-            style="border: 0"
-          ></iframe>
-        </div>
-        <h2 class="footer__title">Контакты для связи</h2>
-        <div class="footer__content">
-          <div class="footer__wrapper">
-            <div class="footer__adress">
-              <p class="metro">
-                Ст. метро
-                <b>Академия наук</b>
-              </p>
-              <p>г. Минск, ул. К. Чорного 5А, 2 Этаж</p>
-              <p>Время работы: Пн-Пт с 10.00 до 18.00 (сб, вскр – выходной)</p>
-            </div>
-            <div class="footer__phone">
-              <a href="tel:+375256649494" target="_blank">
-                Телефон +375 25 664-94-94
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="tel:+375445549594" target="_blank">
-                Телефон +375 44 554-95-94
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a
-                class="footer__icons"
-                href="https://t.me/+375256649494"
-                target="_blank"
-              >
-                Telegram
-                <img src="img/icon__soc/telegram.svg" alt="telegram" />
-              </a>
-              <a
-                class="footer__icons"
-                href="viber://chat?number=%2B375296649494"
-                target="_blank"
-              >
-                Viber
-                <img src="img/icon__soc/viber.svg" alt="viber" />
-              </a>
-              <a
-                class="footer__icons"
-                href="https://instagram.com/ecipazhprofi?igshid=YmMyMTA2M2Y="
-                target="_blank"
-              >
-                Instagram
-                <img src="img/icon__soc/instagram.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="footer__email">
-              <p>E-mail</p>
-              <a href="mailto:avtoshkola_ep@mail.ru">
-                avtoshkola_ep@mail.ru
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-          <div class="footer__wrapper">
-            <div class="footer__adress">
-              <p>
-                Экспобел - автошкола
-                <b>Зеленый луг</b>
-              </p>
-              <p>
-                Пересечение Логойского тракта и МКАД административное здание оф.
-                №309
-              </p>
-              <p>
-                Время работы: Пн,Вт,Ср,Чт – 10.00-18.00, Пт – 9.00–15.00 (сб,
-                вскр – выходной)
-              </p>
-            </div>
-            <div class="footer__phone">
-              <a href="tel:+375296649494" target="_blank">
-                Телефон +375 29 664-94-94
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a
-                class="footer__icons"
-                href="https://t.me/+375256649494"
-                target="_blank"
-              >
-                Telegram
-                <img src="img/icon__soc/telegram.svg" alt="telegram" />
-              </a>
-              <a
-                class="footer__icons"
-                href="viber://chat?number=%2B375296649494"
-                target="_blank"
-              >
-                Viber
-                <img src="img/icon__soc/viber.svg" alt="viber" />
-              </a>
-              <a
-                class="footer__icons"
-                href="https://instagram.com/ecipazhprofi?igshid=YmMyMTA2M2Y="
-                target="_blank"
-              >
-                Instagram
-                <img src="img/icon__soc/instagram.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="footer__email">
-              <p>E-mail</p>
-              <a href="mailto:avtoshkola_ep@mail.ru">
-                avtoshkola_ep@mail.ru
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-          <div class="footer__wrapper">
-            <div class="footer__adress">
-              <p class="metro">
-                Ст. метро
-                <b>Спортивная</b>
-              </p>
-              <p>вход с улицы Бельского, универсам Славянский.</p>
-              <p>г.Минск ул. Дунина-Марцинкевича д. 2/1 кабинет 304.</p>
-              <p>Время работы: Пн-Пт с 9.00 до 17.00 (сб, вскр – выходной)</p>
-            </div>
-            <div class="footer__phone">
-              <a href="tel:+375291017671" target="_blank">
-                Телефон +375 29 101-76-71
-              </a>
-              <a href="tel:+375333817671" target="_blank">
-                Телефон +375 33 381-76-71
-              </a>
-              <a
-                class="footer__icons"
-                href="https://t.me/+375256649494"
-                target="_blank"
-              >
-                Telegram
-                <img src="img/icon__soc/telegram.svg" alt="telegram" />
-              </a>
-              <a
-                class="footer__icons"
-                href="viber://chat?number=%2B375296649494"
-                target="_blank"
-              >
-                Viber
-                <img src="img/icon__soc/viber.svg" alt="viber" />
-              </a>
-              <a
-                class="footer__icons"
-                href="https://instagram.com/ecipazhprofi?igshid=YmMyMTA2M2Y="
-                target="_blank"
-              >
-                Instagram
-                <img src="img/icon__soc/instagram.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="footer__email">
-              <p>E-mail</p>
-              <a href="mailto:avtoshkola_ep@mail.ru">
-                avtoshkola_ep@mail.ru
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-          <div class="footer__wrapper">
-            <div class="footer__adress">
-              <p class="metro">
-                Ст. метро
-                <b>Петровщина</b>
-              </p>
-              <p>г.Минск ул. Дзержинского 94</p>
-              <p>
-                Время работы: пн-пт с 10:00 до 19:00; сб с 10:00 до 14:00 (вскр
-                выходной)
-              </p>
-            </div>
-            <div class="footer__phone">
-              <a href="tel:+375291017671" target="_blank">
-                Телефон +375 29 307-49-96
-              </a>
-              <a
-                class="footer__icons"
-                href="https://t.me/+375256649494"
-                target="_blank"
-              >
-                Telegram
-                <img src="img/icon__soc/telegram.svg" alt="telegram" />
-              </a>
-              <a
-                class="footer__icons"
-                href="viber://chat?number=%2B375296649494"
-                target="_blank"
-              >
-                Viber
-                <img src="img/icon__soc/viber.svg" alt="viber" />
-              </a>
-              <a
-                class="footer__icons"
-                href="https://instagram.com/ecipazhprofi?igshid=YmMyMTA2M2Y="
-                target="_blank"
-              >
-                Instagram
-                <img src="img/icon__soc/instagram.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="footer__email">
-              <p>E-mail</p>
-              <a href="mailto:avtoshkola_ep@mail.ru">
-                avtoshkola_ep@mail.ru
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__text">
-          <h3>Свой автодром ст.м. Кунцевщина/Спортивная</h3>
-          <p>по адресу г.Минск ул. Тимошенко 15</p>
-        </div>
-        <div class="footer__copyright">
-          <p>2022</p>
-          <a href="https://www.instagram.com/skiffon629/" target="_blank">
-            <img src="img/webMaster.png" alt="разработка сайтов" />
-          </a>
-        </div>
+      <div class="footer__copyright">
+        <p>2022</p>
+        <a href="https://www.instagram.com/skiffon629/" target="_blank">
+          <img src="img/webMaster.png" alt="разработка сайтов" />
+        </a>
       </div>
-    </footer>
+    </div>
   </body>
 </html>

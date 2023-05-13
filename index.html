@@ -42,7 +42,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="slick.min.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="scripts/burger-menu.js" defer></script>
+    <script src="scripts/change-content.js" defer></script>
+    <script src="scripts/scroll.js" defer></script>
+    <script src="scripts/send-request.js" defer></script>
   </head>
 
   <body class="wrapper" id="default">
@@ -81,7 +84,7 @@
             <li><a class="header__link" href="#timing">Наборы</a></li>
             <li><a class="header__link" href="gallery.html">Галерея</a></li>
             <li><a class="header__link" href="chip.html">Чип-карта</a></li>
-            <li><a class="header__link" href="#contacts">Контакты</a></li>
+            <li><a class="header__link" href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
         <div class="header__burger">
@@ -100,7 +103,11 @@
                 Качественные и доступные курсы переподготовки водителей - лучшее
                 предложение в трудное время
               </p>
-              <form action="#" class="preview__form">
+              <form
+                action="https://avtoskola.by/mail/sender.php"
+                class="preview__form"
+                method="post"
+              >
                 <div class="input-group">
                   <input
                     type="text"
@@ -113,13 +120,13 @@
                 <div class="input-group">
                   <input
                     type="tel"
-                    name="Phone"
+                    name="phone"
                     required
                     placeholder="Ваш телефон"
                   />
-                  <label for="Phone">Ваш телефон</label>
+                  <label for="phone">Ваш телефон</label>
                 </div>
-                <button type="submit" class="preview__btn btn">
+                <button type="button" class="preview__btn btn">
                   Отправить заявку
                 </button>
               </form>
@@ -212,10 +219,6 @@
       <section class="prices" id="prices">
         <div class="container">
           <h2 class="prices__title">Наши цены</h2>
-          <p class="prices__text">
-            Гарантия лучшей цены: если вы найдете цену ниже, мы готовы сделать
-            Вам индивидуальное предложение!
-          </p>
           <div class="prices__content">
             <div class="prices__item">
               <h3 class="_title">Переподготовка кат. A</h3>
@@ -278,7 +281,8 @@
                 />
               </div>
             </div>
-            <div class="prices__item sale">
+            <!-- <div class="prices__item sale"> для лейбла акция класс сейл-->
+            <div class="prices__item">
               <h3 class="_title">Переподготовка с кат C на кат. CE</h3>
               <p class="_text">Срок обучения 1 месяц</p>
               <div class="price">
@@ -318,8 +322,8 @@
               </p>
               <div class="price">
                 <div class="wrap">
-                  <span class="price__text old-price">115 BYN</span>
-                  <span class="price__text c-price">100 BYN</span>
+                  <span class="price__text old-price">140 BYN</span>
+                  <span class="price__text c-price">120 BYN</span>
                 </div>
                 <img
                   class="price__img"
@@ -329,15 +333,15 @@
               </div>
             </div>
           </div>
-          <p class="prices__sale">
+          <!-- <p class="prices__sale">
             <strong>Внимание !!!</strong>
-            Осенний ценопад !!! Только этой осенью категория
+            Весенний ценопад !!! Только этой весной категория
             <b>СE</b>
             по цене
             <b>640</b>
             рублей!!!
             <a href="tel:+375296649494">+375296649494</a>
-          </p>
+          </p> -->
         </div>
       </section>
 
@@ -372,241 +376,14 @@
               </div>
             </div>
           </div>
+          <div class="footer__copyright">
+            <p>2022</p>
+            <a href="https://www.instagram.com/skiffon629/" target="_blank">
+              <img src="img/webMaster.png" alt="разработка сайтов" />
+            </a>
+          </div>
         </div>
       </section>
     </div>
-
-    <footer class="footer" id="contacts">
-      <div class="container">
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/d/u/0/embed?mid=1pUlEdJ-BdgTRSDaSpOjmg9IeQbJMjuY&ehbc=2E312F"
-            width="80%"
-            height="100%"
-            frameborder="0"
-            allowfullscreen=""
-            aria-hidden="true"
-            tabindex="0"
-            style="border: 0"
-          ></iframe>
-        </div>
-        <h2 class="footer__title">Контакты для связи</h2>
-        <div class="footer__content">
-          <div class="footer__wrapper">
-            <div class="footer__adress">
-              <p class="metro">
-                Ст. метро
-                <b>Академия наук</b>
-              </p>
-              <p>г. Минск, ул. К. Чорного 5А, 2 Этаж</p>
-              <p>Время работы: Пн-Пт с 10.00 до 18.00 (сб, вскр – выходной)</p>
-            </div>
-            <div class="footer__phone">
-              <a href="tel:+375256649494" target="_blank">
-                Телефон +375 25 664-94-94
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a href="tel:+375445549594" target="_blank">
-                Телефон +375 44 554-95-94
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a
-                class="footer__icons"
-                href="https://t.me/+375256649494"
-                target="_blank"
-              >
-                Telegram
-                <img src="img/icon__soc/telegram.svg" alt="telegram" />
-              </a>
-              <a
-                class="footer__icons"
-                href="viber://chat?number=%2B375296649494"
-                target="_blank"
-              >
-                Viber
-                <img src="img/icon__soc/viber.svg" alt="viber" />
-              </a>
-              <a
-                class="footer__icons"
-                href="https://instagram.com/ecipazhprofi?igshid=YmMyMTA2M2Y="
-                target="_blank"
-              >
-                Instagram
-                <img src="img/icon__soc/instagram.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="footer__email">
-              <p>E-mail</p>
-              <a href="mailto:avtoshkola_ep@mail.ru">
-                avtoshkola_ep@mail.ru
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-          <div class="footer__wrapper">
-            <div class="footer__adress">
-              <p>
-                Экспобел - автошкола
-                <b>Зеленый луг</b>
-              </p>
-              <p>
-                Пересечение Логойского тракта и МКАД административное здание оф.
-                №309
-              </p>
-              <p>
-                Время работы: Пн,Вт,Ср,Чт – 10.00-18.00, Пт – 9.00–15.00 (сб,
-                вскр – выходной)
-              </p>
-            </div>
-            <div class="footer__phone">
-              <a href="tel:+375296649494" target="_blank">
-                Телефон +375 29 664-94-94
-                <i class="fa-solid fa-phone"></i>
-              </a>
-              <a
-                class="footer__icons"
-                href="https://t.me/+375256649494"
-                target="_blank"
-              >
-                Telegram
-                <img src="img/icon__soc/telegram.svg" alt="telegram" />
-              </a>
-              <a
-                class="footer__icons"
-                href="viber://chat?number=%2B375296649494"
-                target="_blank"
-              >
-                Viber
-                <img src="img/icon__soc/viber.svg" alt="viber" />
-              </a>
-              <a
-                class="footer__icons"
-                href="https://instagram.com/ecipazhprofi?igshid=YmMyMTA2M2Y="
-                target="_blank"
-              >
-                Instagram
-                <img src="img/icon__soc/instagram.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="footer__email">
-              <p>E-mail</p>
-              <a href="mailto:avtoshkola_ep@mail.ru">
-                avtoshkola_ep@mail.ru
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-          <div class="footer__wrapper">
-            <div class="footer__adress">
-              <p class="metro">
-                Ст. метро
-                <b>Спортивная</b>
-              </p>
-              <p>вход с улицы Бельского, универсам Славянский.</p>
-              <p>г.Минск ул. Дунина-Марцинкевича д. 2/1 кабинет 304.</p>
-              <p>Время работы: Пн-Пт с 9.00 до 17.00 (сб, вскр – выходной)</p>
-            </div>
-            <div class="footer__phone">
-              <a href="tel:+375291017671" target="_blank">
-                Телефон +375 29 101-76-71
-              </a>
-              <a href="tel:+375333817671" target="_blank">
-                Телефон +375 33 381-76-71
-              </a>
-              <a
-                class="footer__icons"
-                href="https://t.me/+375256649494"
-                target="_blank"
-              >
-                Telegram
-                <img src="img/icon__soc/telegram.svg" alt="telegram" />
-              </a>
-              <a
-                class="footer__icons"
-                href="viber://chat?number=%2B375296649494"
-                target="_blank"
-              >
-                Viber
-                <img src="img/icon__soc/viber.svg" alt="viber" />
-              </a>
-              <a
-                class="footer__icons"
-                href="https://instagram.com/ecipazhprofi?igshid=YmMyMTA2M2Y="
-                target="_blank"
-              >
-                Instagram
-                <img src="img/icon__soc/instagram.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="footer__email">
-              <p>E-mail</p>
-              <a href="mailto:avtoshkola_ep@mail.ru">
-                avtoshkola_ep@mail.ru
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-          <div class="footer__wrapper">
-            <div class="footer__adress">
-              <p class="metro">
-                Ст. метро
-                <b>Петровщина</b>
-              </p>
-              <p>г.Минск ул. Дзержинского 94</p>
-              <p>
-                Время работы: пн-пт с 10:00 до 19:00; сб с 10:00 до 14:00 (вскр
-                выходной)
-              </p>
-            </div>
-            <div class="footer__phone">
-              <a href="tel:+375291017671" target="_blank">
-                Телефон +375 29 307-49-96
-              </a>
-              <a
-                class="footer__icons"
-                href="https://t.me/+375256649494"
-                target="_blank"
-              >
-                Telegram
-                <img src="img/icon__soc/telegram.svg" alt="telegram" />
-              </a>
-              <a
-                class="footer__icons"
-                href="viber://chat?number=%2B375296649494"
-                target="_blank"
-              >
-                Viber
-                <img src="img/icon__soc/viber.svg" alt="viber" />
-              </a>
-              <a
-                class="footer__icons"
-                href="https://instagram.com/ecipazhprofi?igshid=YmMyMTA2M2Y="
-                target="_blank"
-              >
-                Instagram
-                <img src="img/icon__soc/instagram.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="footer__email">
-              <p>E-mail</p>
-              <a href="mailto:avtoshkola_ep@mail.ru">
-                avtoshkola_ep@mail.ru
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__text">
-          <h3>Свой автодром ст.м. Кунцевщина/Спортивная</h3>
-          <p>по адресу г.Минск ул. Тимошенко 15</p>
-        </div>
-        <div class="footer__copyright">
-          <p>2022</p>
-          <a href="https://www.instagram.com/skiffon629/" target="_blank">
-            <img src="img/webMaster.png" alt="разработка сайтов" />
-          </a>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

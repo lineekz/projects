@@ -209,24 +209,27 @@
   margin: 0 auto 0 0;
   z-index: 1;
   width: 45%;
+  border-radius: 10px;
 }
 
 
 .chip-info-maintext {
   position: relative;
   z-index: 4;
-  background-color: white;
-  color: black;
+  background-color: #3f414a;
+  color: white;
   margin: -70px 30px 30px 30px;
-  line-height: 1.5;
-  padding: 5px;
-  border-radius: 5px;
+  line-height: 1.7;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
 }
 
 .chip-info-maintext h2 {
   padding: 0 20px;
   text-align: center;
   font-weight: 600;
+  color:rgb(255, 136, 0)
 }
 
 .chip-info-img {
@@ -249,30 +252,34 @@
   background-color: rgb(255, 157, 45);
   margin: 65px 0 0 auto;
   z-index: 1;
+  border-radius: 10px;
   width: 45%;
 }
 
 .chip-info-subtext {
-  background-color: white;
-  color: black;
+  background-color:#3f414a;
+  color: white;
   margin: 30px 30px -45px 30px;
-  line-height: 1.5;
-  padding: 5px;
-  border-radius: 5px;
+  line-height: 1.7;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
 }
 
 .chip-info-subtext h2 {
   padding: 0 20px;
   text-align: center;
   font-weight: 600;
+  color:rgb(255, 136, 0);
 }
 
 .chip-info-warning {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: #3f414a;
   max-width: 45%;
   padding: 15px;
   margin: 0 0 20px 20px;
+  box-shadow: 0 0 20px white;
 }
 
 
