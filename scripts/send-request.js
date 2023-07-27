@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
       type: "post",
       dataType: "html",
       data: form.serialize(),
-      success: function (data) {
+      success: function () {
         alert("Ваша заявка принята, скоро мы Вам перезвоним");
         $("form")[0].reset();
       },

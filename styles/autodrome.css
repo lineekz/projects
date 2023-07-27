@@ -1,18 +1,7 @@
 /* footer */
 
-.footer__offices {
-  margin-top: 15px;
-  padding: 15px 0;
-}
-
-.footer__classes {
-  background-color: #0d0e15;
-  padding: 15px 0;
-  margin-top: 15px;
-}
-
 .map {
-  margin-top: 20px;
+  margin: 20px auto;
   text-align: center;
   height: 480px;
 }
@@ -77,35 +66,12 @@ b {
   font-weight: bold;
 }
 
-.footer__phone {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__phone a,
-.footer__email a {
-  color: #fedc18;
-  transition: all 0.5s ease 0s;
-  padding: 3px 0;
-}
-
-
-.footer__phone a:hover,
-.footer__email a:hover,
-.footer__phone a:active,
-.footer__email a:active {
-  text-transform: uppercase;
-  color: #de5200;
-  text-decoration: underline;
-}
-
 .footer__icons img {
   width: 30px;
   margin: 0px 0 -7px 0;
 }
 
 .footer__copyright {
-  background-color: #0d0e15;
   margin: 0 auto;
   display: flex;
   justify-content: center;

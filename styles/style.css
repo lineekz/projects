@@ -188,7 +188,7 @@ h3 {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 790px) {
   .header__body {
     height: 70px;
   }

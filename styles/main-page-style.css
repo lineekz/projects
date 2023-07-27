@@ -348,7 +348,7 @@ h2:after {
   flex: 0 1 auto;
 }
 
-.about__review{
+.about__review {
   margin: 20px 0 0 0;
 }
 
@@ -571,6 +571,10 @@ h2:after {
   width: 45%;
   text-align: center;
   margin: 20px;
+}
+
+.timing__content:nth-child(5) {
+  margin: 20px auto;
 }
 
 .timing__discription {

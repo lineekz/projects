@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const description = document.querySelectorAll(".timing__discription"),
+  const description = document.querySelectorAll(".timing__discription"),
     date = document.querySelectorAll(".date"),
     price = document.querySelectorAll(".c-price"),
-    oldPrice = document.querySelectorAll(".old-price");
+    oldPrice = document.querySelectorAll(".old-price"),
     count = document.querySelectorAll(".count");
 
-    async function getInfo() {
+  async function getInfo() {
     const info = "info.json";
     const res = await fetch(info);
     const data = await res.json();
